@@ -13,7 +13,7 @@ extension UIColor {
     }
     
     class func QGreen() -> UIColor {
-        return UIColor.color(red: 0, green: 200, blue: 0)
+        return UIColor.color(red: 65, green: 117, blue: 5)
     }
     
     class func QOrange() -> UIColor {

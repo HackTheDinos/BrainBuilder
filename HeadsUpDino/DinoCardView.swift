@@ -8,14 +8,16 @@
 
 import UIKit
 
-class DinoCardView: GameView {
+class DinoCardView: UIView {
 
     let imageView = UIImageView(frame: CGRect.zero)
     let subtitle = UILabel(frame: CGRect.zero)
     let timerLabel = UILabel()
+    let titleLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.whiteColor()
         
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.clipsToBounds = true
@@ -23,28 +25,43 @@ class DinoCardView: GameView {
 
         self.addSubview(imageView)
         self.addSubview(subtitle)
+        self.addSubview(titleLabel)
         
         titleLabel.numberOfLines = 1
-        titleLabel.font = UIFont(name: "Avenir-Black", size: 45)
+        titleLabel.font = UIFont(name: "Avenir-Medium", size: 64)
+        titleLabel.textColor = UIColor.blackColor()
+        titleLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        titleLabel.textAlignment = .Center
 
-        subtitle.font = UIFont(name: "Avenir-Medium", size: 35)
-        subtitle.textColor = UIColor.whiteColor()
-        subtitle.numberOfLines = 0
+        subtitle.font = UIFont(name: "Avenir-Medium", size: 40)
+        subtitle.textColor = UIColor.blackColor()
+        subtitle.numberOfLines = 2
+        subtitle.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        subtitle.textAlignment = .Center
         
         timerLabel.font = UIFont(name: "Avenir-Medium", size: 90)
         timerLabel.text = "60"
         self.addSubview(timerLabel)
+        
         timerLabel.textColor = UIColor.QRed()
+        
+        self.bringSubviewToFront(subtitle)
+        self.bringSubviewToFront(titleLabel)
         
     }
     
     func showImage(imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.hidden = false
+        subtitle.hidden = false
+        titleLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        self.backgroundColor = UIColor.whiteColor()
     }
     
     func hideImage() {
         imageView.hidden = true
+        subtitle.hidden = true
+        titleLabel.backgroundColor = UIColor.clearColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,20 +71,20 @@ class DinoCardView: GameView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        titleLabel.moveToHorizontalCenterOfView(self)
-        titleLabel.y = CGFloat(35)
+        titleLabel.width = self.width
+        titleLabel.height = CGFloat(77)
+        titleLabel.x = 0
+        titleLabel.y = 0
         
-        imageView.size = CGSize(width: 325 , height: 175 )
-        imageView.moveBelowSiblingView(titleLabel, margin: 0)
-        imageView.moveToRightPositionOfSuperview(40)
+        imageView.frame = self.bounds
         
-        timerLabel.sizeToFit()
-        timerLabel.height = imageView.height
-        timerLabel.x = 130
-        timerLabel.y = imageView.y
+//        timerLabel.sizeToFit()
+//        timerLabel.height = imageView.height
+//        timerLabel.x = 130
+//        timerLabel.y = imageView.y
         
-        subtitle.size = subtitle.sizeThatFits(self.size)
-        subtitle.moveBelowSiblingView(self.imageView, margin: 0)
-        subtitle.moveToHorizontalCenterOfView(self)
+        subtitle.size = CGSizeMake(self.width, 96)
+        subtitle.y = self.height - subtitle.height
+        subtitle.x = 0
     }
 }

@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         } else {
             timer.invalidate()
             let gameOverViewController = GameOverViewController(dinos: dinos)
-            self.navigationController?.pushViewController(gameOverViewController, animated: true)
+            self.navigationController?.pushViewController(gameOverViewController, animated: false)
         }
     }
     
@@ -50,12 +50,12 @@ class GameViewController: UIViewController {
         if let z = data?.acceleration.z where fabs(z) > tolerance {
             if z > 0 {
                 self.gameView.titleLabel.text = "CORRECT"
-                self.gameView.background.backgroundColor = UIColor.QGreen()
+                self.gameView.backgroundColor = UIColor.QGreen()
                 dinos.correct()
                 
             } else {
                 self.gameView.titleLabel.text = "Pass"
-                self.gameView.background.backgroundColor = UIColor.QOrange()
+                self.gameView.backgroundColor = UIColor.QOrange()
                 dinos.passed()
             }
             self.gameView.hideImage()
@@ -78,7 +78,6 @@ class GameViewController: UIViewController {
             gameView.subtitle.text = dino.tagline
             gameView.showImage(dino.imageName)
         }
-        gameView.background.backgroundColor = UIColor.QBlue()
         gameView.setNeedsLayout()
         gameView.layoutIfNeeded()
         
