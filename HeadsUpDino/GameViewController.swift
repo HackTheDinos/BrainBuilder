@@ -12,6 +12,7 @@ import CoreMotion
 class GameViewController: UIViewController {
     
     let motionManager = CMMotionManager()
+    var timeLeft = 20
 
     let gameView = DinoCardView(frame: CGRect.zero)
     override func viewDidLoad() {
@@ -26,6 +27,18 @@ class GameViewController: UIViewController {
 
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
             self.getAccelerometerData(data)
+        }
+        
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "tick:", userInfo: nil, repeats: true)
+    }
+    
+    func tick(timer: NSTimer) {
+        if (timeLeft > 0) {
+            self.gameView.timerLabel.text = "\(timeLeft)"
+            timeLeft--
+        } else {
+            timer.invalidate()
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
     

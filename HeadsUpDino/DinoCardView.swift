@@ -12,6 +12,7 @@ class DinoCardView: GameView {
 
     let imageView = UIImageView(frame: CGRect.zero)
     let subtitle = UILabel(frame: CGRect.zero)
+    let timerLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,8 +32,12 @@ class DinoCardView: GameView {
         subtitle.font = UIFont(name: "Avenir-Medium", size: 40)
         subtitle.textColor = UIColor.whiteColor()
         
+        timerLabel.font = UIFont(name: "Avenir-Medium", size: 50)
+        timerLabel.text = "60"
+        self.addSubview(timerLabel)
+        timerLabel.textColor = UIColor.whiteColor()
+        
     }
-
     
     func showImage() {
         imageView.hidden = false
@@ -57,5 +62,8 @@ class DinoCardView: GameView {
 
         subtitle.sizeToFit()
         subtitle.moveBelowAndAlignWithSiblingView(imageView, margin: margin, alignment: .Center)
+        
+        timerLabel.sizeToFit()
+        timerLabel.moveBelowAndAlignWithSiblingView(imageView, margin: 0, alignment: .Center)
     }
 }
