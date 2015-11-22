@@ -86,14 +86,8 @@ class DinoCardView: UIView {
         imageView.width = self.width
         imageView.y = 50
         
-        var subtitleSize = CGSizeMake(self.width, CGFloat.max)
-        let preferredSize = subtitle.sizeThatFits(subtitleSize)
-        subtitleSize.height = fmax(96, preferredSize.height + 20)
-        subtitle.size = subtitleSize
-        subtitle.y = self.height - subtitle.height - barHeight
-        subtitle.x = 0
         bottomBar.sizeToFit()
-        bottomBar.moveBelowSiblingView(subtitle, margin: 0)
+        bottomBar.y = self.height - barHeight
         
     }
 }

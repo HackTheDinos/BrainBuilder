@@ -26,6 +26,7 @@ class GameOverSideView: UIView {
         title.textColor = titleColor
         
         self.addSubview(scrollView)
+        scrollView.clipsToBounds = true
         
         for dino in dinos {
             if (self.showsImages) {
