@@ -49,11 +49,6 @@ class IntroViewController: UIViewController {
         motionManager.stopDeviceMotionUpdates()
     }
     
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -77,9 +72,6 @@ class IntroViewController: UIViewController {
             self.navigationController?.pushViewController(gameViewController, animated: true)
         }
     }
-
-    // tilt down for correct
-    // tilt up for pass
-    // 60 second countdown
+    
 }
 

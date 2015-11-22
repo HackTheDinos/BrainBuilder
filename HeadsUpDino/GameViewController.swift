@@ -12,7 +12,7 @@ import CoreMotion
 class GameViewController: UIViewController {
     
     let motionManager = CMMotionManager()
-    var timeLeft = 60
+    var timeLeft = 10
     var dinoIsShown = false
     let dinos = Dinos()
 
@@ -40,7 +40,8 @@ class GameViewController: UIViewController {
             timeLeft--
         } else {
             timer.invalidate()
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            let gameOverViewController = GameOverViewController(dinos: dinos)
+            self.navigationController?.pushViewController(gameOverViewController, animated: true)
         }
     }
     

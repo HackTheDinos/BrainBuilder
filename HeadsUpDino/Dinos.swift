@@ -41,6 +41,18 @@ class Dinos: NSObject {
         }
     }
     
+    func correctDinoNames() -> [String] {
+        return self.correctDinos.map { (dino) -> String in
+            return dino.name
+        }
+    }
+    
+    func passedDinoNames() -> [String] {
+        return self.passedDinos.map { (dino) -> String in
+            return dino.name
+        }
+    }
+    
     func getNextDino() {
         
         if unseenDinos.count == 0 && passedDinos.count > 0 {
@@ -48,12 +60,9 @@ class Dinos: NSObject {
             passedDinos = []
         }
         
-        if let dino = unseenDinos.first {
-            self.currentDino = dino
-            unseenDinos.removeFirst()
-        }
-
-
+        let randomIndex = Int(arc4random_uniform(UInt32(unseenDinos.count)))
+        self.currentDino = unseenDinos[randomIndex]
+        unseenDinos.removeAtIndex(randomIndex)
     }
     
     private func parseJson(json: AnyObject) {
