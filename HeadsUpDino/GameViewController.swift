@@ -9,7 +9,7 @@
 import UIKit
 import CoreMotion
 
-let totalTime = CGFloat(60)
+let totalTime = CGFloat(20)
 
 class GameViewController: UIViewController {
     

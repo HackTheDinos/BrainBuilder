@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeadsUpDino/GameOverSideView.swift"
-            timestampString = "469906314.752301"
+            timestampString = "469907309.104416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "layoutSubviews()"
             landmarkType = "5">
          </BreakpointContent>

@@ -51,10 +51,12 @@ class GameOverViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let startOverHeight = CGFloat(300)
+        let startOverHeight = CGFloat(295)
+        
         self.leftView.size = CGSizeMake(self.view.width/2, startOverHeight)
         self.rightView.size = self.leftView.size
         self.rightView.moveToRightOfSiblingView(self.leftView, margin: 0)
+        self.leftView.clipsToBounds = true
             
         startOver.size = CGSizeMake(180, 60)
         startOver.y = startOverHeight
