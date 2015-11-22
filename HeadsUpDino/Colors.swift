@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     class func QBlue() -> UIColor {
-        return UIColor.color(red: 0, green: 0, blue: 200)
+        return UIColor.color(red: 29, green: 93, blue: 222)
     }
     
     class func QGreen() -> UIColor {
@@ -21,7 +21,7 @@ extension UIColor {
     }
     
     class func QRed() -> UIColor {
-        return UIColor.color(red: 200, green: 0, blue: 0)
+        return UIColor.color(red: 239, green: 52, blue: 27)
     }
     
     private class func color(red red: CGFloat, green: CGFloat, blue: CGFloat)-> UIColor {

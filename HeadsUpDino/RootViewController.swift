@@ -20,7 +20,7 @@ class RootViewController: UIViewController {
         childNavigationController.view.frame = self.view.bounds
         let viewController = IntroViewController()
         childNavigationController.pushViewController(viewController, animated: false)
-
+    
     }
     
     override func prefersStatusBarHidden() -> Bool {

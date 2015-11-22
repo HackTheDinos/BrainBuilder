@@ -11,8 +11,8 @@ import UIKit
 class Dinos: NSObject {
     var dinos: [Dino] = []
     private var unseenDinos: [Dino] = []
-    private var correctDinos: [Dino] = []
-    private var passedDinos: [Dino] = []
+    var correctDinos: [Dino] = []
+    var passedDinos: [Dino] = []
     var currentDino: Dino?
     
     override init() {
@@ -38,18 +38,6 @@ class Dinos: NSObject {
     func passed() {
         if let dino = self.currentDino where passedDinos.last != dino {
             passedDinos.append(dino)
-        }
-    }
-    
-    func correctDinoNames() -> [String] {
-        return self.correctDinos.map { (dino) -> String in
-            return dino.name
-        }
-    }
-    
-    func passedDinoNames() -> [String] {
-        return self.passedDinos.map { (dino) -> String in
-            return dino.name
         }
     }
     

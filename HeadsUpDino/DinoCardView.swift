@@ -12,8 +12,15 @@ class DinoCardView: UIView {
 
     let imageView = UIImageView(frame: CGRect.zero)
     let subtitle = UILabel(frame: CGRect.zero)
-    let timerLabel = UILabel()
     let titleLabel = UILabel()
+    var percentDone = CGFloat(0) {
+        didSet {
+            topBar.percentDone = percentDone
+            bottomBar.percentDone = percentDone
+        }
+    }
+    private let topBar = BarView()
+    private let bottomBar = BarView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,14 +46,11 @@ class DinoCardView: UIView {
         subtitle.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
         subtitle.textAlignment = .Center
         
-        timerLabel.font = UIFont(name: "Avenir-Medium", size: 90)
-        timerLabel.text = "60"
-        self.addSubview(timerLabel)
-        
-        timerLabel.textColor = UIColor.QRed()
-        
         self.bringSubviewToFront(subtitle)
         self.bringSubviewToFront(titleLabel)
+        
+        self.addSubview(topBar)
+        self.addSubview(bottomBar)
         
     }
     
@@ -71,20 +75,25 @@ class DinoCardView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        topBar.sizeToFit()
+        let barHeight = topBar.height
+        
         titleLabel.width = self.width
-        titleLabel.height = CGFloat(77)
-        titleLabel.x = 0
-        titleLabel.y = 0
+        titleLabel.height = 77
+        titleLabel.moveBelowSiblingView(topBar, margin: 0)
         
-        imageView.frame = self.bounds
+        imageView.height = self.height - 50
+        imageView.width = self.width
+        imageView.y = 50
         
-//        timerLabel.sizeToFit()
-//        timerLabel.height = imageView.height
-//        timerLabel.x = 130
-//        timerLabel.y = imageView.y
-        
-        subtitle.size = CGSizeMake(self.width, 96)
-        subtitle.y = self.height - subtitle.height
+        var subtitleSize = CGSizeMake(self.width, CGFloat.max)
+        let preferredSize = subtitle.sizeThatFits(subtitleSize)
+        subtitleSize.height = fmax(96, preferredSize.height + 20)
+        subtitle.size = subtitleSize
+        subtitle.y = self.height - subtitle.height - barHeight
         subtitle.x = 0
+        bottomBar.sizeToFit()
+        bottomBar.moveBelowSiblingView(subtitle, margin: 0)
+        
     }
 }

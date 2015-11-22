@@ -22,6 +22,9 @@
 		471743BB1C01897400264F2C /* Dinosaurs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471743BA1C01897400264F2C /* Dinosaurs.xcassets */; };
 		471743BD1C0200D800264F2C /* descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 471743BC1C0200D800264F2C /* descriptions.json */; };
 		471743BF1C0211DD00264F2C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471743BE1C0211DD00264F2C /* GameOverViewController.swift */; };
+		47AE89FC1C022D6100106B2F /* GameOverSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE89FB1C022D6100106B2F /* GameOverSideView.swift */; };
+		47AE89FE1C022DFD00106B2F /* DinoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE89FD1C022DFD00106B2F /* DinoImageView.swift */; };
+		47C0D0AF1C02282B00E40785 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0D0AE1C02282B00E40785 /* BarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		471743BA1C01897400264F2C /* Dinosaurs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Dinosaurs.xcassets; sourceTree = "<group>"; };
 		471743BC1C0200D800264F2C /* descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = descriptions.json; path = resources/descriptions.json; sourceTree = "<group>"; };
 		471743BE1C0211DD00264F2C /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		47AE89FB1C022D6100106B2F /* GameOverSideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverSideView.swift; sourceTree = "<group>"; };
+		47AE89FD1C022DFD00106B2F /* DinoImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoImageView.swift; sourceTree = "<group>"; };
+		47C0D0AE1C02282B00E40785 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,12 @@
 				471743B41C0187D600264F2C /* RootViewController.swift */,
 				471743B21C01869200264F2C /* GameViewController.swift */,
 				471743BE1C0211DD00264F2C /* GameOverViewController.swift */,
+				47AE89FB1C022D6100106B2F /* GameOverSideView.swift */,
+				47AE89FD1C022DFD00106B2F /* DinoImageView.swift */,
 				471743B61C0188E700264F2C /* Dinos.swift */,
 				471743AE1C01792800264F2C /* GameView.swift */,
 				471743B81C01892D00264F2C /* DinoCardView.swift */,
+				47C0D0AE1C02282B00E40785 /* BarView.swift */,
 				471743BA1C01897400264F2C /* Dinosaurs.xcassets */,
 				471743AC1C01742600264F2C /* Colors.swift */,
 				471743981C0172B800264F2C /* Main.storyboard */,
@@ -173,9 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				471743AF1C01792800264F2C /* GameView.swift in Sources */,
+				47C0D0AF1C02282B00E40785 /* BarView.swift in Sources */,
 				471743971C0172B800264F2C /* IntroViewController.swift in Sources */,
+				47AE89FC1C022D6100106B2F /* GameOverSideView.swift in Sources */,
 				471743B51C0187D600264F2C /* RootViewController.swift in Sources */,
 				471743B71C0188E700264F2C /* Dinos.swift in Sources */,
+				47AE89FE1C022DFD00106B2F /* DinoImageView.swift in Sources */,
 				471743BF1C0211DD00264F2C /* GameOverViewController.swift in Sources */,
 				471743AD1C01742600264F2C /* Colors.swift in Sources */,
 				471743951C0172B800264F2C /* AppDelegate.swift in Sources */,

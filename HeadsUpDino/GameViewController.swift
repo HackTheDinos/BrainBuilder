@@ -9,10 +9,12 @@
 import UIKit
 import CoreMotion
 
+let totalTime = CGFloat(60)
+
 class GameViewController: UIViewController {
     
     let motionManager = CMMotionManager()
-    var timeLeft = 10
+    var timeLeft = totalTime
     var dinoIsShown = false
     let dinos = Dinos()
 
@@ -36,7 +38,7 @@ class GameViewController: UIViewController {
     
     func tick(timer: NSTimer) {
         if (timeLeft > 0) {
-            self.gameView.timerLabel.text = "\(timeLeft)"
+            self.gameView.percentDone = (totalTime - timeLeft)/totalTime
             timeLeft--
         } else {
             timer.invalidate()
