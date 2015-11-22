@@ -25,14 +25,17 @@ class GameView: UIView {
         background.backgroundColor = UIColor.QBlue()
         self.addSubview(background)
         
-        titleLabel.text = "Place on\nForehead"
+        self.restart()
         titleLabel.numberOfLines = 2
         titleLabel.font = UIFont(name: "Avenir-Black", size: 85)
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.textAlignment = .Center
         background.addSubview(titleLabel)
         
-        
+    }
+    
+    func restart() {
+        titleLabel.text = "Place on\nForehead"
     }
     
     override func layoutSubviews() {

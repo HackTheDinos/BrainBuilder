@@ -16,7 +16,9 @@ class IntroViewController: UIViewController {
     let motionManager = CMMotionManager()
     var hasStartedGame = false {
         didSet {
-            self.countdownToStart()
+            if (hasStartedGame) {
+                self.countdownToStart()
+            }
         }
     }
 
@@ -26,15 +28,21 @@ class IntroViewController: UIViewController {
         motionManager.accelerometerUpdateInterval = 1/60
     }
     
+    override func viewWillAppear(animated: Bool) {
+        gameView.restart()
+        hasStartedGame = false
+        number = 3
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
-            if let data = data where data.userAcceleration.z > 0.1 {
-                if (!self.hasStartedGame) {
-                    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-                    self.hasStartedGame = true
-                    self.motionManager.stopDeviceMotionUpdates()
-                }
+            if let data = data where data.userAcceleration.z > 0.1 && self.hasStartedGame == false {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                self.hasStartedGame = true
+                self.motionManager.stopDeviceMotionUpdates()
             }
         }
     }
