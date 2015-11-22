@@ -237,6 +237,11 @@
 	self.x = CGRectGetMaxX(siblingView.frame) + margin;
 }
 
+- (void)moveToRightPositionOfSuperview:(CGFloat)position
+{
+    self.x = self.superview.width - position - self.width;
+}
+
 - (void)moveToLeftOfSiblingView:(UIView *)siblingView margin:(CGFloat)margin
 {
 	self.x = CGRectGetMinX(siblingView.frame) - self.boundsWidth - margin ;

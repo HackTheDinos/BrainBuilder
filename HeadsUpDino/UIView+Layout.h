@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-
+NS_ASSUME_NONNULL_BEGIN
 /** Generic void block typedef. */
 typedef void(^ActionBlock)();
 
@@ -117,6 +117,13 @@ typedef void(^ActionBlock)();
 - (void)moveToRightOfSiblingView:(UIView *)siblingView margin:(CGFloat)margin;
 
 /**
+ Positions self horizontally relative to its superview, letting you position self e.g., 20pts right of sibling view.
+ 
+ @param position A horizontal position, in points from your right side to the right side of the superview.
+ */
+- (void)moveToRightPositionOfSuperview:(CGFloat)position;
+
+/**
  Positions self horizontally relative to the sibling view, letting you position self e.g., 20pts left of sibling view.
  
  @param siblingView The view to the left which you are positioning self.
@@ -197,3 +204,4 @@ typedef void(^ActionBlock)();
 
 
 @end
+NS_ASSUME_NONNULL_END

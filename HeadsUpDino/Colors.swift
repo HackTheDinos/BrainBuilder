@@ -20,6 +20,10 @@ extension UIColor {
         return UIColor.color(red: 200, green: 90, blue: 0)
     }
     
+    class func QRed() -> UIColor {
+        return UIColor.color(red: 200, green: 0, blue: 0)
+    }
+    
     private class func color(red red: CGFloat, green: CGFloat, blue: CGFloat)-> UIColor {
         let divisor = CGFloat(255)
         

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "709EF051E32C0FA060BEEA694314278FB65798C2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "709EF051E32C0FA060BEEA694314278FB65798C2" : 0,
+    "3D5F753B6CE06D0BD79F9A3A3A29248C39E5AB85" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "239F388B-535D-46F7-BC8F-0C9E3908735A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "709EF051E32C0FA060BEEA694314278FB65798C2" : "HeadsUpDino\/",
+    "3D5F753B6CE06D0BD79F9A3A3A29248C39E5AB85" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HeadsUpDino",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HeadsUpDino.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:HackTheDinos\/BrainBuilder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D5F753B6CE06D0BD79F9A3A3A29248C39E5AB85"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:HackTheDinos\/Quadceratops.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "709EF051E32C0FA060BEEA694314278FB65798C2"
+    }
+  ]
+}

@@ -28,6 +28,10 @@ class IntroViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        number = 0
+        self.nextNumber()
+        return
 
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
             if let data = data where data.userAcceleration.z > 0.1 {

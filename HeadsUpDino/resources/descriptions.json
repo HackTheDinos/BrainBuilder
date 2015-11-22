@@ -1,70 +1,51 @@
 {
-	"dinosaurs" : [
-		{
-			"name" : "Allosaurus",
-			"tag": "Formidable carnivorous dinosaurs!",
-			"period" : "Late Jurassic",
-			"description" : "Allosaurus was the largest of the carnivorous dinosaurs that lived in the late Jurassic period. This was a huge bipedal predator whose length could have reached over 12 m. Its weight ranged from one to four tons. Relative to the large and powerful hindlimbs, its three-fingered forelimbs were small, and the body was balanced by a long by a long and heavily muscled tail. Allosaurus lived in prehistoric forests, along rivers. Its remains have been discovered in Europe, Africa, and North America.
-
-As with most dinosaurs, its skull was full of cavities and comprised of narrow strips of bone, making the head highly flexible and agile, able to swallow huge chunks of meat. Its worn out teeth were falling out to be replaced by the growth of new ones."
- 		},
-		{
-			"name" : "Spinosaurus",
-			"tag" : "The largest theropod thorn reptile of all time!",
-			"period" : "Cretaceous”,
-			“description” : “meaning thorn reptile, this dinosaur was thought to be more ferocious and predatory than the T-rex!” 
-		},
-		{
-			"name" : “Carnufex”
-			"tag" : "The Butcher!”,
-			“description” : “This dinosaur was recently discovered in 2015. Since Carnufex is known from most regions of the skeleton, a lot is known about the animal. The species measured approximately 3 metres (10 ft) in length, though it may have grown larger since the holotype specimen was an immature individual.
-
-The skull of Carnufex is notable as it bridges a gap in morphology in early crocodylomorphs. There are also rough areas at the top of the skull, suggesting that the taxon possessed some form of decorative display. Its snout was long and narrow and possessed teeth which were longer and more serrated at the front of the mouth than the back.”
-		}
-	
-{
-			"name" : “Brontosaurus”
-			"tag" : "The Thunder Lizard!”,
-			"period" : “late Jurassic”,
-			“description” : “Originally named by its discoverer Othniel Charles Marsh in 1879, Brontosaurus had long been considered a junior synonym of Apatosaurus; its original species Brontosaurus excelsus having been reclassified as A. excelsus in 1903. However, an extensive study published in 2015 by a joint research team of England and Portugal concluded that Brontosaurus was a valid genus of sauropod distinct from Apatosaurus.[1][2][3] Nevertheless, not all paleontologists agree with this splitting.” 
-		}
-	
-{
-			"name" : “Tyrannosaurus Rex”
-			"tag" : "The Tyrant Lizard!”,
-			"period" : “late Jurassic”,
-			“description” : “The species Tyrannosaurus rex (rex meaning king in Latin), commonly abbreviated to T. rex, is one of the most well-represented of the large theropods. Tyrannosaurus lived throughout what is now western North America, on what was then an island continent known as Laramidia. Tyrannosaurus had a much wider range than other tyrannosaurids. Fossils are found in a variety of rock formations dating to the Maastrichtian age of the upper Cretaceous Period, 68 to 66 million years ago. It was the last known member of the tyrannosaurids, and among the last non-avian dinosaurs to exist before the Cretaceous–Paleogene extinction event.” 
-		}
-
-{
-			"name" : “Stegosaurus ”
-			"tag" : "The Roof Lizard!”,
-			"period" : “late Jurassic”,
-			“description” : “A large, heavily built, herbivorous quadruped, Stegosaurus had a distinctive and unusual posture, with a heavily rounded back, short fore limbs, head held low to the ground, and a stiffened tail held high in the air. Its array of plates and spikes has been the subject of much speculation. The spikes were most likely used for defense, while the plates have also been proposed as a defensive mechanism, as well as having display and thermoregulatory functions.
-
-Stegosaurus had a relatively low brain-to-body mass ratio. It had a short neck and small head, meaning it most likely ate low-lying bushes and shrubs. It was the largest known of all the stegosaurians (bigger than genera such as Kentrosaurus and Huayangosaurus) and, although roughly bus-sized, it nonetheless shared many anatomical features (including the tail spines and plates) with the other stegosaurian genera.” 
-		}
-
-{
-			"name" : “Pterodactyls ”
-			"tag" : "The Winged Finger!”,
-			"period" : “late Jurassic”,
-			“description” : “It is currently thought to contain only a single species, Pterodactylus antiquus, the first pterosaur species to be named and identified as a flying reptile.
-
-The fossil remains of this species have been found primarily in the Solnhofen limestone of Bavaria, Germany, dated to the late Jurassic Period (early Tithonian), about 150.8–148.5 million years ago,[2] though more fragmentary remains have been tentatively identified from elsewhere in Europe and in Africa.
-
-It was a carnivore and probably preyed upon fish and other small animals. Like all pterosaurs, Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs. It was supported internally by collagen fibres and externally by keratinous ridges.” 
-		}
-
-{
-			"name" : “Archelon ”
-			"tag" : "The Ruling Turtle!”,
-			"period" : “Late Cretaceous”,
-			“description” : “It is currently thought to contain only a single species, Pterodactylus antiquus, the first pterosaur species to be named and identified as a flying reptile.
-
-The fossil remains of this species have been found primarily in the Solnhofen limestone of Bavaria, Germany, dated to the late Jurassic Period (early Tithonian), about 150.8–148.5 million years ago,[2] though more fragmentary remains have been tentatively identified from elsewhere in Europe and in Africa.
-
-It was a carnivore and probably preyed upon fish and other small animals. Like all pterosaurs, Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs. It was supported internally by collagen fibres and externally by keratinous ridges.” 
-		}
-			]
+  "dinosaurs" : [
+    {
+      "name" : "Allosaurus",
+      "tag": "Formidable carnivorous dinosaurs!",
+      "period" : "Late Jurassic",
+      "description" : "Allosaurus was the largest of the carnivorous dinosaurs that lived in the late Jurassic period. This was a huge bipedal predator whose length could have reached over 12 m. Its weight ranged from one to four tons. Relative to the large and powerful hindlimbs, its three-fingered forelimbs were small, and the body was balanced by a long by a long and heavily muscled tail. Allosaurus lived in prehistoric forests, along rivers. Its remains have been discovered in Europe, Africa, and North America. As with most dinosaurs, its skull was full of cavities and comprised of narrow strips of bone, making the head highly flexible and agile, able to swallow huge chunks of meat. Its worn out teeth were falling out to be replaced by the growth of new ones."
+    },
+    {
+      "name" : "Spinosaurus",
+      "tag" : "The largest theropod thorn reptile of all time!",
+      "period" : "Cretaceous",
+      "description" : "meaning thorn reptile, this dinosaur was thought to be more ferocious and predatory than the T-rex!" 
+    },
+    {
+      "name" : "Carnufex",
+      "tag" : "The Butcher!",
+      "description" : "This dinosaur was recently discovered in 2015. Since Carnufex is known from most regions of the skeleton, a lot is known about the animal. The species measured approximately 3 metres (10 ft) in length, though it may have grown larger since the holotype specimen was an immature individual. The skull of Carnufex is notable as it bridges a gap in morphology in early crocodylomorphs. There are also rough areas at the top of the skull, suggesting that the taxon possessed some form of decorative display. Its snout was long and narrow and possessed teeth which were longer and more serrated at the front of the mouth than the back."
+    },
+    {
+      "name" : "Brontosaurus",
+      "tag" : "The Thunder Lizard!",
+      "period" : "late Jurassic",
+      "description" : "Originally named by its discoverer Othniel Charles Marsh in 1879, Brontosaurus had long been considered a junior synonym of Apatosaurus; its original species Brontosaurus excelsus having been reclassified as A. excelsus in 1903. However, an extensive study published in 2015 by a joint research team of England and Portugal concluded that Brontosaurus was a valid genus of sauropod distinct from Apatosaurus.[1][2][3] Nevertheless, not all paleontologists agree with this splitting." 
+    },
+    {
+      "name" : "Tyrannosaurus Rex",
+      "tag" : "The Tyrant Lizard!",
+      "period" : "late Jurassic",
+      "description" : "The species Tyrannosaurus rex (rex meaning king in Latin), commonly abbreviated to T. rex, is one of the most well-represented of the large theropods. Tyrannosaurus lived throughout what is now western North America, on what was then an island continent known as Laramidia. Tyrannosaurus had a much wider range than other tyrannosaurids. Fossils are found in a variety of rock formations dating to the Maastrichtian age of the upper Cretaceous Period, 68 to 66 million years ago. It was the last known member of the tyrannosaurids, and among the last non-avian dinosaurs to exist before the Cretaceous–Paleogene extinction event." 
+    },
+    {
+      "name" : "Stegosaurus",
+      "tag" : "The Roof Lizard!",
+      "period" : "late Jurassic",
+      "description" : "A large, heavily built, herbivorous quadruped, Stegosaurus had a distinctive and unusual posture, with a heavily rounded back, short fore limbs, head held low to the ground, and a stiffened tail held high in the air. Its array of plates and spikes has been the subject of much speculation. The spikes were most likely used for defense, while the plates have also been proposed as a defensive mechanism, as well as having display and thermoregulatory functions. Stegosaurus had a relatively low brain-to-body mass ratio. It had a short neck and small head, meaning it most likely ate low-lying bushes and shrubs. It was the largest known of all the stegosaurians (bigger than genera such as Kentrosaurus and Huayangosaurus) and, although roughly bus-sized, it nonetheless shared many anatomical features (including the tail spines and plates) with the other stegosaurian genera." 
+    },
+    {
+      "name" : "Pterodactylus",
+      "tag" : "The Winged Finger!",
+      "period" : "late Jurassic",
+      "description" : "It is currently thought to contain only a single species, Pterodactylus antiquus, the first pterosaur species to be named and identified as a flying reptile.  The fossil remains of this species have been found primarily in the Solnhofen limestone of Bavaria, Germany, dated to the late Jurassic Period (early Tithonian), about 150.8–148.5 million years ago,[2] though more fragmentary remains have been tentatively identified from elsewhere in Europe and in Africa. It was a carnivore and probably preyed upon fish and other small animals. Like all pterosaurs, Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs. It was supported internally by collagen fibres and externally by keratinous ridges." 
+    },
+    {
+      "name" : "Archelon",
+      "tag" : "The Ruling Turtle!",
+      "period" : "Late Cretaceous",
+      "description": "It is currently thought to contain only a single species, Pterodactylus antiquus, the first pterosaur species to be named and identified as a flying reptile. The fossil remains of this species have been found primarily in the Solnhofen limestone of Bavaria, Germany, dated to the late Jurassic Period (early Tithonian), about 150.8–148.5 million years ago,[2] though more fragmentary remains have been tentatively identified from elsewhere in Europe and in Africa.  It was a carnivore and probably preyed upon fish and other small animals. Like all pterosaurs, Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs. It was supported internally by collagen fibres and externally by keratinous ridges."
+    }
+  ]
 }

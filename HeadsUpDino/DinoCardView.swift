@@ -17,8 +17,6 @@ class DinoCardView: GameView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let image = UIImage(named: "allosaurus")
-        imageView.image = image
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.clipsToBounds = true
         imageView.hidden = true
@@ -27,19 +25,21 @@ class DinoCardView: GameView {
         self.addSubview(subtitle)
         
         titleLabel.numberOfLines = 1
-        titleLabel.font = UIFont(name: "Avenir-Black", size: 50)
+        titleLabel.font = UIFont(name: "Avenir-Black", size: 45)
 
-        subtitle.font = UIFont(name: "Avenir-Medium", size: 40)
+        subtitle.font = UIFont(name: "Avenir-Medium", size: 35)
         subtitle.textColor = UIColor.whiteColor()
+        subtitle.numberOfLines = 0
         
-        timerLabel.font = UIFont(name: "Avenir-Medium", size: 50)
+        timerLabel.font = UIFont(name: "Avenir-Medium", size: 90)
         timerLabel.text = "60"
         self.addSubview(timerLabel)
-        timerLabel.textColor = UIColor.whiteColor()
+        timerLabel.textColor = UIColor.QRed()
         
     }
     
-    func showImage() {
+    func showImage(imageName: String) {
+        imageView.image = UIImage(named: imageName)
         imageView.hidden = false
     }
     
@@ -53,17 +53,21 @@ class DinoCardView: GameView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let margin = CGFloat(20)
         
-        imageView.size = CGSize(width: 300, height: 200)
-        imageView.moveToCenterOfView(self)
+        titleLabel.moveToHorizontalCenterOfView(self)
+        titleLabel.y = CGFloat(35)
         
-        titleLabel.moveAboveAndAlignWithSiblingView(imageView, margin: margin, alignment: .Center)
-
-        subtitle.sizeToFit()
-        subtitle.moveBelowAndAlignWithSiblingView(imageView, margin: margin, alignment: .Center)
+        imageView.size = CGSize(width: 325 , height: 175 )
+        imageView.moveBelowSiblingView(titleLabel, margin: 0)
+        imageView.moveToRightPositionOfSuperview(40)
         
         timerLabel.sizeToFit()
-        timerLabel.moveBelowAndAlignWithSiblingView(imageView, margin: 0, alignment: .Center)
+        timerLabel.height = imageView.height
+        timerLabel.x = 130
+        timerLabel.y = imageView.y
+        
+        subtitle.size = subtitle.sizeThatFits(self.size)
+        subtitle.moveBelowSiblingView(self.imageView, margin: 0)
+        subtitle.moveToHorizontalCenterOfView(self)
     }
 }

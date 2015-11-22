@@ -20,6 +20,8 @@
 		471743B71C0188E700264F2C /* Dinos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471743B61C0188E700264F2C /* Dinos.swift */; };
 		471743B91C01892D00264F2C /* DinoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471743B81C01892D00264F2C /* DinoCardView.swift */; };
 		471743BB1C01897400264F2C /* Dinosaurs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471743BA1C01897400264F2C /* Dinosaurs.xcassets */; };
+		471743BD1C0200D800264F2C /* descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 471743BC1C0200D800264F2C /* descriptions.json */; };
+		471743BF1C0211DD00264F2C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471743BE1C0211DD00264F2C /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		471743B61C0188E700264F2C /* Dinos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinos.swift; sourceTree = "<group>"; };
 		471743B81C01892D00264F2C /* DinoCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoCardView.swift; sourceTree = "<group>"; };
 		471743BA1C01897400264F2C /* Dinosaurs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Dinosaurs.xcassets; sourceTree = "<group>"; };
+		471743BC1C0200D800264F2C /* descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = descriptions.json; path = resources/descriptions.json; sourceTree = "<group>"; };
+		471743BE1C0211DD00264F2C /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				471743961C0172B800264F2C /* IntroViewController.swift */,
 				471743B41C0187D600264F2C /* RootViewController.swift */,
 				471743B21C01869200264F2C /* GameViewController.swift */,
+				471743BE1C0211DD00264F2C /* GameOverViewController.swift */,
 				471743B61C0188E700264F2C /* Dinos.swift */,
 				471743AE1C01792800264F2C /* GameView.swift */,
 				471743B81C01892D00264F2C /* DinoCardView.swift */,
@@ -88,6 +93,7 @@
 				471743A71C01730500264F2C /* UIView+Layout.h */,
 				471743A81C01730500264F2C /* UIView+Layout.m */,
 				471743A61C01730400264F2C /* HeadsUpDino-Bridging-Header.h */,
+				471743BC1C0200D800264F2C /* descriptions.json */,
 			);
 			path = HeadsUpDino;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				4717439C1C0172B800264F2C /* Assets.xcassets in Resources */,
 				471743BB1C01897400264F2C /* Dinosaurs.xcassets in Resources */,
 				4717439A1C0172B800264F2C /* Main.storyboard in Resources */,
+				471743BD1C0200D800264F2C /* descriptions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +176,7 @@
 				471743971C0172B800264F2C /* IntroViewController.swift in Sources */,
 				471743B51C0187D600264F2C /* RootViewController.swift in Sources */,
 				471743B71C0188E700264F2C /* Dinos.swift in Sources */,
+				471743BF1C0211DD00264F2C /* GameOverViewController.swift in Sources */,
 				471743AD1C01742600264F2C /* Colors.swift in Sources */,
 				471743951C0172B800264F2C /* AppDelegate.swift in Sources */,
 				471743B31C01869200264F2C /* GameViewController.swift in Sources */,

@@ -12,7 +12,9 @@ import CoreMotion
 class GameViewController: UIViewController {
     
     let motionManager = CMMotionManager()
-    var timeLeft = 20
+    var timeLeft = 60
+    var dinoIsShown = false
+    let dinos = Dinos()
 
     let gameView = DinoCardView(frame: CGRect.zero)
     override func viewDidLoad() {
@@ -48,23 +50,37 @@ class GameViewController: UIViewController {
             if z > 0 {
                 self.gameView.titleLabel.text = "CORRECT"
                 self.gameView.background.backgroundColor = UIColor.QGreen()
+                dinos.correct()
                 
             } else {
                 self.gameView.titleLabel.text = "Pass"
                 self.gameView.background.backgroundColor = UIColor.QOrange()
+                dinos.passed()
             }
             self.gameView.hideImage()
             gameView.subtitle.text = ""
+            dinoIsShown = false
         } else if let z = data?.acceleration.z where fabs(z) < tolerance * 0.5 {
             self.showDino()
         }
     }
     
     func showDino() {
-        gameView.titleLabel.text = "Allosaurus"
-        gameView.subtitle.text = "The allosaurus rox"
-        gameView.showImage()
+        if (dinoIsShown) {
+            return
+        }
+        
+        dinos.getNextDino()
+        self.dinoIsShown = true
+        if let dino = dinos.currentDino {
+            gameView.titleLabel.text = dino.name
+            gameView.subtitle.text = dino.tagline
+            gameView.showImage(dino.imageName)
+        }
         gameView.background.backgroundColor = UIColor.QBlue()
+        gameView.setNeedsLayout()
+        gameView.layoutIfNeeded()
+        
     }
     
     override func viewDidDisappear(animated: Bool) {
